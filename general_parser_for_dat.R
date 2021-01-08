@@ -31,10 +31,10 @@ writeLines(header,'parsed.csv')
 #create a vector to know on which line the samples start. 
 #You can use this place to search for patterns (if you want to select a subset of samples with known naming pattern)
 #If a sample name contains at least one letter, run the following:
-#vectorCut <- grep("[A-Za-z]", data)
+vectorCut <- grep("[A-Za-z]", data)
 
-#If a sample name contains only numbers with a known pattern, run the following:
-vectorCut <- grep("64101", data)
+#If a sample name contains only numbers with a known pattern, run the following (with your pattern):
+#vectorCut <- grep(<pattern>, data)
 
 nlines <- vectorCut[2]-vectorCut[1]
 

@@ -54,10 +54,8 @@ for (i in vectorCut){
   counter = 1
   for (n in beg:end){
     
-    #Parse, clean and concatenate lines belonging to each sample. In this case, there is 133 lines for each
-    #This could be instrument specific
-    result[counter] <- trimws(gsub("    ","",data[n]))
-    result[counter] <- gsub("  "," ",result[counter])
+    #Parse, clean and concatenate lines belonging to each sample.
+    result[counter] <- trimws(gsub("\\s+", " ", data[n]))
     result[counter] <- gsub(" ",",",result[counter])
     
     counter <- counter+1

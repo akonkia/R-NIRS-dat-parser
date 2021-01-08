@@ -1,9 +1,6 @@
 #read all lines from an ascii file exported from ISIscan
 data <- readLines(file.choose())
 
-#Inspect the first couple of rows of the file (ex. 20)
-head(data, 20)
-
 #Find rows with information from ISIscan. They start with #
 info <- data[grep("#", data)]
 first_wav <- gsub("#FIRST_WAVELENGTH=", "",info [grep("FIRST_WAVELENGTH", info)])
